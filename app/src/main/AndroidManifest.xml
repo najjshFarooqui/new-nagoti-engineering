@@ -21,8 +21,9 @@
         </activity>
         <activity android:name=".PartListActivity" />
         <activity android:name=".AddPartsActivity" />
-        <activity android:name=".ItemList" />
-        <activity android:name=".DetailsActivity"></activity>
+        <activity android:name=".ItemListActivity" />
+        <activity android:name=".DetailsActivity" />
+        <activity android:name=".UpdateActivity"></activity>
     </application>
 
 </manifest>

@@ -12,29 +12,39 @@ public interface ItemDao {
     @Query("select * from Item")
     List<Item> getAll();
 
-    @Query("select max(Id) from Item limit 1 ")
+    @Query("delete  from item")
+     void deleteAll();
+
+    @Query("select distinct oem from item ")
+    List<String> getOem();
+
+     @Query("select * from item where oem=:oem")
+     void getParts(String oem);
+
+
+    @Query("select max(id) from Item limit 1 ")
     int getMaxId();
 
-    @Query("select * from Item where Id =:sId ")
+    @Query("select * from Item where id =:sId ")
     Item get(int sId);
 
     @Query("Delete from Item where Id= :sid ")
     void deleteMany(int sid);
 
-    @Query("SELECT * from Item where partName like :name limit 1")
+    @Query("SELECT * from Item where telPartNumber like :name limit 1")
     Item findByName(String name);
 
     @Insert
-    void insertAll(List<Item> students);
+    void insertAll(List<Item> items);
 
     @Insert
-    void insert(Item product);
+    void insert(Item item);
 
     @Update
-    void update(Item product);
+    void update(Item item);
 
     @Delete
-    void delete(Item product);
+    void delete(Item item);
 }
 
 

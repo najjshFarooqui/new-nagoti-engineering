@@ -1,9 +1,48 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".DetailsActivity">
+<layout>
+    <data>
+        <variable
+            name="item"
+            type="com.example.applligent.newnagoriengg.Item" />
+    </data>
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context=".DetailsActivity">
 
-</android.support.constraint.ConstraintLayout>
+      <!--  <EditText
+            android:id="@+id/companyName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+           android:text="@{item.companyName}"
+            android:layout_gravity="center_horizontal"/>
+
+
+        <EditText
+            android:id="@+id/partName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:text="@{item.partName}"
+            android:layout_gravity="center_horizontal"/>
+
+        <EditText
+            android:id="@+id/partNumber"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:text="@{item.partNumber}"
+            android:layout_gravity="center_horizontal"/>
+
+        <EditText
+            android:id="@+id/priceRate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:text="@{``+item.priceRate}"
+            android:layout_gravity="center_horizontal" />-->
+    </LinearLayout>
+</layout>

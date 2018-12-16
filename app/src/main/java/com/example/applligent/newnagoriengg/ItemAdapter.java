@@ -14,6 +14,7 @@ import java.util.List;
 public class ItemAdapter extends RecyclerView.Adapter<ItemAdapter.ItemHolder> {
     List<Item> items;
 
+
     public ItemAdapter(List<Item> items) {
         this.items = items;
     }
@@ -51,13 +52,14 @@ public class ItemAdapter extends RecyclerView.Adapter<ItemAdapter.ItemHolder> {
                 public void onClick(View v) {
                     Item item = items.get(getAdapterPosition());
                     Intent intent = new Intent(itemView.getContext(), DetailsActivity.class);
+                    intent.putExtra("arg_item_id", item.id);
                     itemView.getContext().startActivity(intent);
                 }
             });
         }
 
         protected void bindTo(Item items) {
-            companyName.setText(items.companyName);
+            companyName.setText(items.oem);
         }
     }
 }
