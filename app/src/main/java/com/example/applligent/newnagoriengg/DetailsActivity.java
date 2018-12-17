@@ -13,8 +13,8 @@ import com.example.applligent.newnagoriengg.databinding.ActivityDetailsBinding;
 public class DetailsActivity extends AppCompatActivity {
     int itemId;
     Item companyItem;
-    ActivityDetailsBinding binding;
     ItemDao itemDao;
+    ActivityDetailsBinding binding;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
